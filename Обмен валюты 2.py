@@ -22,7 +22,8 @@ def exchange():
 
             if code in data['rates']:
                 exchange_rate = data['rates'][code]
-                mb.showinfo("Курсы обмена",f"Курс: {exchange_rate:.2f} {code} за 1 доллар")
+                c_name = cur[code]
+                mb.showinfo("Курсы обмена",f"Курс: {exchange_rate:.2f} {c_name} за 1 доллар")
             else:
                 mb.showerror("Ошибка",f"Валюта {code} не найдена")
         except Exception as e:
